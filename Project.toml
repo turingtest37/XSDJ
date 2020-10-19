@@ -1,0 +1,9 @@
+name = "XSDJ"
+uuid = "841fb957-77d8-4252-929b-12a89a158eb6"
+authors = ["a5vzener <c.difficile@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+URIParser = "30578b45-9adc-5946-b283-645ec420af67"
