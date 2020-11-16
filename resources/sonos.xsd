@@ -39,7 +39,11 @@
 
     <xs:simpleType name="algorithm">
         <xs:restriction base="xs:token">
-            <xs:enumeration value="AES/CBC/PKCS#7"/>
+            <xs:enumeration value="AES/CBC/PKCS#7">
+                <xs:annotation>
+                    <xs:documentation>I like crypto tokens!</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
 

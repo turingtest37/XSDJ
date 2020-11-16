@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Sonos Music Service WSDL definition
+   Copyright (c) 2007-2016 Sonos, Inc. All Rights Reserved
+
+   This document is licensed under the Creative Commons Attribution, Share-Alike
+   license, v3.0 (Unported) with the following modifications:
+
+   As clarified in the license, distribution of any software (source or binary)
+   that instantiates the API will require the party(ies) distributing such
+   software to publish the revised API and associated documentation, at no charge,
+   in accordance with the terms of the license. There is no requirement, however,
+   to publish the underlying code.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+            xmlns:tns="http://www.sonos.com/Services/1.1" 
+            targetNamespace="http://www.sonos.com/Services/1.1"
+            elementFormDefault="qualified">
+
+    <xs:simpleType id="s1" name="privateDataType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="2048"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="sonosUri">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="2048"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="algorithm">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="AES/CBC/PKCS#7"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="id" type="tns:id"/>
+
+    <xs:element name="password">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="128"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:simpleType name="itemType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="artist"/>
+            <xs:enumeration value="album"/>
+            <xs:enumeration value="genre"/>
+            <xs:enumeration value="playlist"/>
+            <xs:enumeration value="track"/>
+            <xs:enumeration value="search"/>
+            <xs:enumeration value="stream"/>
+            <xs:enumeration value="show"/>
+            <xs:enumeration value="program"/>
+            <xs:enumeration value="favorites"/>
+            <xs:enumeration value="favorite"/>
+            <xs:enumeration value="collection"/>
+            <xs:enumeration value="container"/>
+            <xs:enumeration value="albumList"/>
+            <xs:enumeration value="trackList"/>
+            <xs:enumeration value="streamList"/>
+            <xs:enumeration value="artistTrackList"/>
+            <xs:enumeration value="audiobook"/>
+            <xs:enumeration value="other"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
